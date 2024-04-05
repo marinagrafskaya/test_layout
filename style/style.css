@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "Inter";
+  /* Имя шрифта */
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+  /* Путь к файлу со шрифтом */
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+:root {
+  --white: #f9f9f9;
+  --whitish: #fbfbfb;
+  --black: black;
+  --gray: #666666;
+  --gray-light: #cecece;
+  --graphite: #3e3e3e;
+  --blue: #0b457f;
+  --blue-light: #006cd8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* Шапка */
+
+ul {
+  list-style: none;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+.header-top {
+  background-color: var(--whitish);
+  top: 0;
+  width: 100%;
+  height: 63px;
+  z-index: 100;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper-nav, .inner-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav {
+  background-color: var(--whitish);
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+
+.nav .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu a {
+  display: block;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.side-menu {
+  display: none;
+}
+
+.hamb {
+  display: none;
+}
+
+.header-content {
+  width: 100%;
+  height: 43px;
+  box-shadow: 0px 4px 6px 0px #00000026;
+  display: flex;
+  align-items: center;
+}
+
+.header-content span {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.header-content .container {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  gap: 32px;
+  text-align: center;
+}
+
+.header-content .container .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-content .container .item:last-child {
+  margin-left: auto;
+}
+
+header .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  height: 40px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  transition: all 0.5s;
+  margin-left: 25px;
+}
+
+header .btn:hover {
+  background-color: var(--blue-light);
+}
+
+header .btn a {
+  padding: 30px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Основной контент */
+
+#services {
+  margin-bottom: 100px;
+}
+
+#services h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: var(--graphite);
+  margin-bottom: 30px;
+}
+
+#services .services-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  height: 512px;
+}
+
+#services .services-inner .item {
+  color: var(--white);
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  background-image: url(../images/72dabbe3e3f9d9afb47667d768642ffc.png);
+  overflow: hidden;
+}
+
+#services .services-inner .item .btn {
+  width: 142px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+#services .services-inner .item .btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#services .services-inner .item .btn a {
+  color: var(--white);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#services .services-inner .item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#services .services-inner .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+}
+
+#services .services-inner .text h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  width: 338px;
+}
+
+#services .services-inner .text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 295px;
+  height: 36px;
+}
+
+#services .services-inner .item:nth-child(1) {
+  grid-area: 1 / 1 / 7 / 3;
+  background-position: left;
+}
+
+#services .services-inner .item:nth-child(1) .image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+#services .services-inner .item:nth-child(2) {
+  grid-area: 1 / 3 / 4 / 5;
+  background-position: left 0 top 25%;
+}
+
+#services .services-inner .item:nth-child(2) .image {
+  position: absolute;
+  right: -85px;
+  bottom: -30px;
+  padding: 10px;
+  width: 251px;
+  height: 150px;
+  z-index: 20;
+}
+
+#services .services-inner .item:nth-child(2) svg {
+  position: absolute;
+  right: 35px;
+  bottom: -15px;
+  padding: 10px;
+}
+
+#services .services-inner .item:nth-child(2) .btn {
+  width: 180px;
+  height: 45px;
+}
+
+#services .services-inner .item:nth-child(3) {
+  grid-area: 4 / 3 / 7 / 5;
+  background-position: left 50% top 20%;
+}
+
+#services .services-inner .item:nth-child(3) .image {
+  position: absolute;
+  right: -70px;
+  bottom: -193px;
+  padding: 10px;
+  width: 275px;
+  height: 403px;
+}
+
+#services .services-inner .item:nth-child(3) .btn {
+  width: 180px;
+  height: 45px;
+}
+
+#services .services-inner .item:nth-child(4) {
+  grid-area: 1 / 5 / 7 / 7;
+  background-position: left;
+}
+
+#services .services-inner .item:nth-child(4) .text p {
+  width: 323px;
+}
+
+#services .services-inner .item:nth-child(4) .image {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  padding: 10px;
+  width: 347px;
+  height: 165px;
+}
+
+#services .services-inner .item:nth-child(4) svg {
+  position: absolute;
+  left: 3px;
+  bottom: -22px;
+  width: 301px;
+  height: 301px;
+}
